@@ -1,0 +1,34 @@
+.result {
+  background-color: white;
+  border: 0.1px solid lightgrey;
+  width: 500px;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+
+.result:hover {
+  background-color: lightskyblue;
+}
+
+.result-type-Airport {
+  margin: 0px auto;
+  background-color: salmon;
+}
+
+.result-type-City {
+  margin: 0px auto;
+  background-color: aqua;
+}
+
+.result-type-Station {
+  margin: 0px auto;
+  background-color: grey;
+}
+
+.result-name {
+}
+
+.result-details {
+  color: grey;
+  font-size: 10px;
+}

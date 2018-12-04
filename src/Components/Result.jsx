@@ -31,16 +31,16 @@ const Result = ({ result }) => {
 
 const parseResultType = bookingId => {
   const resultRefObj = {
-    city: 'aqua',
-    train: 'grey',
-    airport: 'salmon',
-    district: 'green',
-    region: 'yellow'
+    city: '#79B4E2',
+    train: '#9C9BB7',
+    airport: '#F08080',
+    district: '#7BC68E',
+    region: '#7BC68E'
   };
 
   const resultType = bookingId.slice(0, bookingId.indexOf('-'));
   return resultType === 'train'
-    ? ['Station', 'grey']
+    ? ['Station', '#9C9BB7']
     : [
         resultType.charAt(0).toUpperCase() + resultType.slice(1),
         resultRefObj[resultType]

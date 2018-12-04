@@ -2,3 +2,9 @@
   width: 500px;
   padding: 5px;
 }
+
+.search-form-container {
+  padding: 5%;
+  height: 100px;
+  background-color: #edc640;
+}

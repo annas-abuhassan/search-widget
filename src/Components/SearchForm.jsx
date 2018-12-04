@@ -11,7 +11,9 @@ class SearchForm extends Component {
 
   render() {
     return (
-      <div>
+      <div className="search-form-container">
+        <h1>Where are you going?</h1>
+        Pick-up Location
         <input
           onChange={this.onChange}
           placeholder="city, airport, station, region, district..."
@@ -24,9 +26,7 @@ class SearchForm extends Component {
 
   onChange = event => {
     const newTerm = event.target.value;
-    this.setState({
-      term: newTerm
-    });
+    this.setState({ term: newTerm });
     this.updateSearchResults(newTerm);
   };
 

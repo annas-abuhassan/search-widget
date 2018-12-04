@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SearchForm.css';
+import SearchResults from './SearchResults.jsx';
 import * as api from '../api';
 
 class SearchForm extends Component {
@@ -16,6 +17,7 @@ class SearchForm extends Component {
           placeholder="city, airport, station, region, district..."
           className="input-field"
         />
+        <SearchResults results={this.state.searchResults} />
       </div>
     );
   }

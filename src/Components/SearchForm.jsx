@@ -6,27 +6,44 @@ import * as api from '../api';
 class SearchForm extends Component {
   state = {
     term: '',
-    searchResults: []
+    searchResults: [],
+    display: false
   };
 
   render() {
+    const { display, searchResults } = this.state;
     return (
       <div className="search-form-container">
         <h1>Where are you going?</h1>
         Pick-up Location
         <input
+          aria-label="Search widget input field"
           onChange={this.onChange}
           placeholder="city, airport, station, region, district..."
           className="input-field"
+          onBlur={this.loseFocus}
+          onClick={this.focus}
         />
-        <SearchResults results={this.state.searchResults} />
+        {display ? <SearchResults results={searchResults} /> : <> </>}
       </div>
     );
   }
 
-  onChange = event => {
-    const newTerm = event.target.value;
-    this.setState({ term: newTerm });
+  focus = e => {
+    this.setState({
+      display: true
+    });
+  };
+
+  loseFocus = e => {
+    this.setState({
+      display: false
+    });
+  };
+
+  onChange = e => {
+    const newTerm = e.target.value;
+    this.setState({ term: newTerm, display: true });
     this.updateSearchResults(newTerm);
   };
 

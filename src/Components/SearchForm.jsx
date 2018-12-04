@@ -33,11 +33,16 @@ class SearchForm extends Component {
   updateSearchResults = async term => {
     // this will be called in the on change function,
     // takes the new term and if it is validated, will do a get request from the utils function
-
-    const results = await api.getSearchResults(term);
-    this.setState({
-      searchResults: results
-    });
+    if (term.length >= 2) {
+      const results = await api.getSearchResults(term);
+      this.setState({
+        searchResults: results
+      });
+    } else {
+      this.setState({
+        searchResults: []
+      });
+    }
   };
 }
 

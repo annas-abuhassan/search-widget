@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchWidget from './Components/SearchWidget';
+import SearchForm from './Components/SearchForm';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchWidget />
+        <SearchForm />
       </div>
     );
   }

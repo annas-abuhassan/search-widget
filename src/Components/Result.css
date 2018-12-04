@@ -10,22 +10,17 @@
   background-color: lightskyblue;
 }
 
-.result-type-Airport {
-  margin: 0px auto;
+.result-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px auto;
+  width: 80%;
   background-color: salmon;
 }
 
-.result-type-City {
-  margin: 0px auto;
-  background-color: aqua;
-}
-
-.result-type-Station {
-  margin: 0px auto;
-  background-color: grey;
-}
-
-.result-name {
+.result-body {
+  margin: 5px;
 }
 
 .result-details {

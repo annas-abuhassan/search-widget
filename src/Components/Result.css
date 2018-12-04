@@ -16,7 +16,8 @@
   justify-content: center;
   margin: 5px auto;
   width: 80%;
-  background-color: salmon;
+  background-color: purple;
+  border-radius: 5%;
 }
 
 .result-body {

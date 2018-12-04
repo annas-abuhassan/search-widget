@@ -3,11 +3,11 @@ import './Result.css';
 
 const Result = ({ result }) => {
   const { bookingId, name, country, region } = result;
-  return bookingId ? (
+  return country ? (
     <div className="result">
       <div
         className="result-type"
-        style={{ 'background-color': parseResultType(bookingId)[1] }}
+        style={{ backgroundColor: parseResultType(bookingId)[1] }}
       >
         {parseResultType(bookingId)[0]}
       </div>
@@ -19,7 +19,13 @@ const Result = ({ result }) => {
       </div>
     </div>
   ) : (
-    <div> result not found </div>
+    <div className="result">
+      <div className="result-type">N/A</div>
+      <div className="result-body">
+        <div className="result-name">No results found</div>
+        <div className="result-details">Try something else...</div>
+      </div>
+    </div>
   );
 };
 

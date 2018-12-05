@@ -1,10 +1,13 @@
 import React from 'react';
 import './Result.css';
 
-const Result = ({ result }) => {
+const Result = ({ result, updateSearchTerm }) => {
   const { bookingId, name, country, region } = result;
   return country ? (
-    <div className="result">
+    <div
+      className="result"
+      onClick={() => updateSearchTerm(`${name}, ${region}, ${country}`)}
+    >
       <div
         className="result-type"
         style={{ backgroundColor: parseResultType(bookingId)[1] }}

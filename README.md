@@ -1,44 +1,51 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Search Widget
 
-## Available Scripts
+The point of this repository is to demonstrate my ability to create a "Search Widget" ala [Rental Cars](www.rentalcars.com)
+I chose React to make this, and used Mocha & Chai to do some unit testing.
+A live version of this app can be found [here](https://aah-rentalcars.netlify.com)
 
-In the project directory, you can run:
+## Feature Dreakdown
 
-### `npm start`
+Core features, as per the given specification:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [x] Text box labelled 'Pick-up Location'
+- [x] Placeholder text within input box
+- [x] Focus state is applied upon giving the input box focus
+- [x] Correct criteria is read out when using a screen reader
+- [x] Placeholder text disappears when a single character is entered into the input box
+- [x] Search results are displayed upon entering two or more characters into the input box
+- [x] Search results displayed are limited to 6
+- [x] When no search term is recognised, a "No results found" message appears
+- [x] When removing search term leaving only one character, the search results are no longer displayed
+- [x] All styling as per rentalcars.com
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Additional features I felt was nifty:
 
-### `npm test`
+- [x] Loading spinner appears when API calls are made
+- [x] Clicking a search result completes the input box with a complete search query
+- [x] Clicking back onto the input box returns back the original search term
+- [x] Used debouncing to limit API calls when a user is entering / deleting a search term
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Instructions
 
-### `npm run build`
+1. Clone this repo
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```
+   git clone https://github.com/annas-abuhassan/search-widget.git
+   ```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+2. Change directory to the cloned repo and install all package dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```
+   npm i
+   ```
 
-### `npm run eject`
+3. Run a local version of the app on localhost:3000:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```
+   npm start
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Annas Abu-Hassan

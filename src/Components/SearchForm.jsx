@@ -17,13 +17,12 @@ class SearchForm extends Component {
     return (
       <div className="search-form-container">
         <h1>Where are you going?</h1>
-        <h2>Pick-up Location:</h2>
+        <h2>Pick-up Location</h2>
         <input
           aria-label="Search widget input field"
           onChange={this.onChange}
           placeholder="city, airport, station, region, district..."
           className="input-field"
-          onBlur={this.loseFocus}
           onClick={this.focus}
           value={term}
         />
@@ -54,10 +53,14 @@ class SearchForm extends Component {
 
   updateSearchResults = async term => {
     if (term.length >= 2) {
-      const results = await api.getSearchResults(term);
-      this.setState({
-        searchResults: results
-      });
+      try {
+        const results = await api.getSearchResults(term);
+        this.setState({
+          searchResults: results
+        });
+      } catch (error) {
+        console.log(error);
+      }
     } else {
       this.setState({
         searchResults: []

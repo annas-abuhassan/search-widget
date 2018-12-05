@@ -59,7 +59,6 @@ class SearchForm extends Component {
   };
 
   updateSearchResults = _.debounce(async term => {
-    console.log('HI');
     if (term.length >= 2) {
       try {
         const results = await api.getSearchResults(term);

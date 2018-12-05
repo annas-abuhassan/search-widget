@@ -3,6 +3,7 @@
   border: 0.1px solid lightgrey;
   display: grid;
   grid-template-columns: 2fr 8fr;
+  width: 100%;
 }
 
 .result:hover {
@@ -13,18 +14,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5% auto;
-  width: 80%;
+  border-radius: 5%;
   color: white;
   background-color: purple;
-  border-radius: 5%;
+  margin: 5%;
 }
 
 .result-body {
-  margin: 1%;
+  font-size: 1em;
+  margin: 5%;
+}
+
+.result-name {
+  font-size: 0.85em;
 }
 
 .result-details {
+  font-size: 0.75em;
   color: grey;
-  font-size: 10px;
 }

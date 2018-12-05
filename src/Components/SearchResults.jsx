@@ -1,6 +1,5 @@
 import React from 'react';
 import Result from './Result';
-import './SearchResults.css';
 
 const SearchResults = ({ results, updateSearchTerm }) => {
   return results.length ? (

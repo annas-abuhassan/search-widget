@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'underscore';
 import './SearchForm.css';
 import SearchResults from './SearchResults.jsx';
 import * as api from '../api';
@@ -51,7 +52,8 @@ class SearchForm extends Component {
     this.updateSearchResults(newTerm);
   };
 
-  updateSearchResults = async term => {
+  updateSearchResults = _.debounce(async term => {
+    console.log('HI');
     if (term.length >= 2) {
       try {
         const results = await api.getSearchResults(term);
@@ -66,7 +68,7 @@ class SearchForm extends Component {
         searchResults: []
       });
     }
-  };
+  }, 500);
 
   updateSearchTerm = searchTermResult => {
     this.setState({

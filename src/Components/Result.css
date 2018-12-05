@@ -33,3 +33,15 @@
   font-size: 0.75em;
   color: grey;
 }
+
+/* desktop */
+
+@media screen and (min-width: 1025px) {
+  .result-type {
+    margin: 10%;
+  }
+
+  .result-body {
+    margin: 2.5%;
+  }
+}

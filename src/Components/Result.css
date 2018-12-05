@@ -13,7 +13,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 5px auto;
+  margin: 5% auto;
   width: 80%;
   color: white;
   background-color: purple;
@@ -21,7 +21,7 @@
 }
 
 .result-body {
-  margin: 5px;
+  margin: 1%;
 }
 
 .result-details {

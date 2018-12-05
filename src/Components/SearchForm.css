@@ -1,9 +1,16 @@
 .input-field {
-  width: 500px;
-  padding: 5px;
+  width: 80%;
 }
 
 .search-form-container {
-  padding: 5%;
+  padding: 2%;
+  width: 500px;
+  height: 360px;
+  border: 2px solid black;
   background-color: #edc640;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: normal;
 }

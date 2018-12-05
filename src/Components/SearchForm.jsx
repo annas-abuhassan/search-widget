@@ -12,10 +12,11 @@ class SearchForm extends Component {
 
   render() {
     const { display, searchResults } = this.state;
+
     return (
       <div className="search-form-container">
         <h1>Where are you going?</h1>
-        Pick-up Location
+        <h2>Pick-up Location:</h2>
         <input
           aria-label="Search widget input field"
           onChange={this.onChange}
@@ -29,13 +30,13 @@ class SearchForm extends Component {
     );
   }
 
-  focus = e => {
+  focus = () => {
     this.setState({
       display: true
     });
   };
 
-  loseFocus = e => {
+  loseFocus = () => {
     this.setState({
       display: false
     });
@@ -48,8 +49,6 @@ class SearchForm extends Component {
   };
 
   updateSearchResults = async term => {
-    // this will be called in the on change function,
-    // takes the new term and if it is validated, will do a get request from the utils function
     if (term.length >= 2) {
       const results = await api.getSearchResults(term);
       this.setState({

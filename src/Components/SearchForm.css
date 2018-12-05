@@ -1,6 +1,14 @@
-.input-field {
+input {
   padding: 2%;
   width: 80%;
+}
+
+.loading {
+  background-color: #ffffff;
+  background-image: url('http://loadinggif.com/images/image-selection/3.gif');
+  background-size: 25px 25px;
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
 .search-form-container {

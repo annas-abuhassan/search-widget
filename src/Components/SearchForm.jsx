@@ -9,11 +9,12 @@ class SearchForm extends Component {
     prevTerm: '',
     term: '',
     searchResults: [],
-    display: false
+    display: false,
+    loading: false
   };
 
   render() {
-    const { display, searchResults, term } = this.state;
+    const { display, searchResults, term, loading } = this.state;
 
     return (
       <div className="search-form-container">
@@ -23,9 +24,9 @@ class SearchForm extends Component {
           aria-label="Search widget input field"
           onChange={this.onChange}
           placeholder="city, airport, station, region, district..."
-          className="input-field"
           onClick={this.focus}
           value={term}
+          className={loading ? 'loading' : ''}
         />
         {display ? (
           <SearchResults
@@ -48,7 +49,12 @@ class SearchForm extends Component {
 
   onChange = e => {
     const newTerm = e.target.value;
-    this.setState({ prevTerm: newTerm, term: newTerm, display: true });
+    this.setState({
+      prevTerm: newTerm,
+      term: newTerm,
+      display: true,
+      loading: true
+    });
     this.updateSearchResults(newTerm);
   };
 
@@ -58,14 +64,16 @@ class SearchForm extends Component {
       try {
         const results = await api.getSearchResults(term);
         this.setState({
-          searchResults: results
+          searchResults: results,
+          loading: false
         });
       } catch (error) {
         console.log(error);
       }
     } else {
       this.setState({
-        searchResults: []
+        searchResults: [],
+        loading: false
       });
     }
   }, 500);

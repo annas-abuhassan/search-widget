@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Result.css';
 
 const Result = ({ result, updateSearchTerm }) => {
@@ -48,6 +49,14 @@ const parseResultType = bookingId => {
         resultType.charAt(0).toUpperCase() + resultType.slice(1),
         resultRefObj[resultType]
       ];
+};
+
+Result.propTypes = {
+  result: PropTypes.object.isRequired,
+  bookingId: PropTypes.objectOf(PropTypes.string.isRequired),
+  name: PropTypes.objectOf(PropTypes.string.isRequired),
+  country: PropTypes.objectOf(PropTypes.string.isRequired),
+  region: PropTypes.objectOf(PropTypes.string.isRequired)
 };
 
 export default Result;

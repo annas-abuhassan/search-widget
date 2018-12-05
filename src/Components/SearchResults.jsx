@@ -1,5 +1,6 @@
 import React from 'react';
 import Result from './Result';
+import PropTypes from 'prop-types';
 
 const SearchResults = ({ results, updateSearchTerm }) => {
   return results.length ? (
@@ -17,6 +18,11 @@ const SearchResults = ({ results, updateSearchTerm }) => {
   ) : (
     <> </>
   );
+};
+
+SearchResults.propTypes = {
+  results: PropTypes.array.isRequired,
+  updateSearchTerm: PropTypes.func.isRequired
 };
 
 export default SearchResults;

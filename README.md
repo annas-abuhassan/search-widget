@@ -1,7 +1,8 @@
 # Search Widget
 
 The point of this repository is to demonstrate my ability to create a "Search Widget" ala [Rental Cars](www.rentalcars.com)
-I chose React to make this, and used Mocha & Chai to do some unit testing.
+
+I chose React to make this, and used Mocha & Chai to do some unit testing.  
 A live version of this app can be found [here](https://aah-rentalcars.netlify.com)
 
 ## Feature Breakdown

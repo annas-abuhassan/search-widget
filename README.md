@@ -4,7 +4,7 @@ The point of this repository is to demonstrate my ability to create a "Search Wi
 I chose React to make this, and used Mocha & Chai to do some unit testing.
 A live version of this app can be found [here](https://aah-rentalcars.netlify.com)
 
-## Feature Dreakdown
+## Feature Breakdown
 
 Core features, as per the given specification:
 
@@ -26,7 +26,17 @@ Additional features I felt was nifty:
 - [x] Clicking back onto the input box returns back the original search term
 - [x] Used debouncing to limit API calls when a user is entering / deleting a search term
 
-## Instructions
+## Getting Started
+
+### Prerequisites
+
+This repo requires the following packages:
+
+- [react](https://www.npmjs.com/package/react)
+- [axios](https://www.npmjs.com/package/axios)
+- [underscore](https://www.npmjs.com/package/underscore)
+
+### Steps
 
 1. Clone this repo
 

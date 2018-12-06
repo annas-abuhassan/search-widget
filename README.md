@@ -2,7 +2,7 @@
 
 The point of this repository is to demonstrate my ability to create a "Search Widget" ala [Rental Cars](www.rentalcars.com)
 
-I chose React to make this app, and used Jest + Enzyme for creating tests.
+I chose React to make this app, and used Jest + Enzyme for creating tests.  
 A live version of this app can be found [here](https://aah-rentalcars.netlify.com)
 
 ## Feature Breakdown
@@ -37,7 +37,7 @@ This repo requires the following packages:
 - [react](https://www.npmjs.com/package/react)
 - [enzyme](https://www.npmjs.com/package/enzyme)
 - [axios](https://www.npmjs.com/package/axios)
-- [underscore](https://www.npmjs.com/package/underscore)
+- [lodash.debounce](https://www.npmjs.com/package/lodash.debounce)
 
 ### Steps
 
@@ -61,10 +61,8 @@ This repo requires the following packages:
 
 ### Testing
 
-Testing has been carried out using Jest + Enzyme.
-The tests consist of shallow rendering of each component and also mock API calls.
-
-You can run the tests with Jest by using:
+Testing has been carried out using Jest + Enzyme.  
+The tests can be run by using:
 
 ```
 npm t

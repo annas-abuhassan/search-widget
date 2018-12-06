@@ -5,4 +5,6 @@ export const getSearchResults = term => {
 
   if (term.length >= 2)
     return axios.get(API_URL).then(({ data }) => data.results.docs);
+
+  return [];
 };

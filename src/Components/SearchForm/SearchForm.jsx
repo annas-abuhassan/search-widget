@@ -17,7 +17,7 @@ class SearchForm extends Component {
     const { display, searchResults, term, loading } = this.state;
 
     return (
-      <form className="search-form-container">
+      <form className="search-form-container" onSubmit={this.handleSubmit}>
         <h1>Where are you going?</h1>
         <label>Pick-up Location</label>
         <input
@@ -39,6 +39,10 @@ class SearchForm extends Component {
       </form>
     );
   }
+  handleSubmit = e => {
+    e.preventDefault();
+    // whatever extra functionality this widget would get incorporated into
+  };
 
   focus = () => {
     this.setState({

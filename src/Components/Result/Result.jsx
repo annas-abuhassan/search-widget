@@ -7,7 +7,9 @@ const Result = ({ result, updateSearchTerm }) => {
   return bookingId ? (
     <div
       className="result"
-      onClick={() => updateSearchTerm(`${name}, ${region}, ${country}`)}
+      onClick={() =>
+        updateSearchTerm(`${name}, ${region ? region + ', ' : ''}${country}`)
+      }
     >
       <div
         className="result-type"

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import _ from 'underscore';
+import debounce from 'lodash.debounce';
 import './SearchForm.css';
 import SearchResults from '../SearchResults/SearchResults.jsx';
 import * as api from '../api/api.js';
@@ -61,7 +61,7 @@ class SearchForm extends Component {
     this.updateSearchResults(newTerm);
   };
 
-  updateSearchResults = _.debounce(async term => {
+  updateSearchResults = debounce(async term => {
     try {
       const results = await api.getSearchResults(term);
       this.setState({
@@ -72,7 +72,7 @@ class SearchForm extends Component {
     } catch (error) {
       console.log(error);
     }
-  }, 500);
+  }, 300);
 
   updateSearchTerm = searchTermResult => {
     this.setState({

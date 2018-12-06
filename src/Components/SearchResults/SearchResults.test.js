@@ -3,7 +3,7 @@ import SearchResults from './SearchResults';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('SearchResults component', () => {
   it('Does not render individual Result components when no results are passed through props', () => {

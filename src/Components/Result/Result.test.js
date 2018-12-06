@@ -3,7 +3,7 @@ import Result from './Result';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 const rawAirportResult = {
   country: 'United Kingdom',

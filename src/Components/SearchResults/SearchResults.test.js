@@ -20,8 +20,7 @@ describe('SearchResults component', () => {
         { bookingId: 4 },
         { bookingId: 5 },
         { bookingId: 6 }
-      ],
-      updateSearchTerm: () => {}
+      ]
     };
     const wrapper = shallow(<SearchResults {...searchResultProps} />);
     const results = wrapper.find('Result');

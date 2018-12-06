@@ -16,7 +16,7 @@ const Result = ({ result, updateSearchTerm }) => {
         {parseResultType(bookingId)[0]}
       </div>
       <div className="result-body">
-        <div className="result-name">{name} </div>
+        <div className="result-name">{name}</div>
         <div className="result-details">
           {`${region ? region + ', ' : ''}${country}`}
         </div>

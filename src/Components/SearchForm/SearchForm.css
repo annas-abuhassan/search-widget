@@ -4,13 +4,15 @@
 }
 
 h1 {
-  font-size: 1.5em;
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.3em;
+  text-shadow: none;
+  padding-bottom: 10px;
 }
 
 label {
   color: #444;
-  font-weight: normal;
-  font-size: 1em;
 }
 
 input {

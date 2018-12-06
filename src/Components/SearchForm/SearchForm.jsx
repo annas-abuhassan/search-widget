@@ -19,7 +19,7 @@ class SearchForm extends Component {
     return (
       <form className="search-form-container" onSubmit={this.handleSubmit}>
         <h1>Where are you going?</h1>
-        <label>Pick-up Location</label>
+        <label htmlFor="search-form-container">Pick-up Location</label>
         <input
           aria-label="Search widget input field"
           onChange={this.onChange}

@@ -6,7 +6,12 @@ Enzyme.configure({ adapter: new Adapter() });
 import { shallow, mount } from 'enzyme';
 
 describe('SearchForm component', () => {
-  it('starts with an empty input field', () => {
+  it('renders an input field', () => {
+    const wrapper = shallow(<SearchForm />);
+    expect(wrapper.find('input').exists()).toEqual(true);
+  });
+
+  it('input field initial value is an empty string', () => {
     const wrapper = shallow(<SearchForm />);
     const inputFieldText = wrapper.find('input').text();
     expect(inputFieldText).toEqual('');

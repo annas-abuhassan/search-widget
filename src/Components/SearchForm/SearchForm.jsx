@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import _ from 'underscore';
 import './SearchForm.css';
 import SearchResults from '../SearchResults/SearchResults.jsx';
-import * as api from '../../api';
+import * as api from '../api/api.js';
 
 class SearchForm extends Component {
   state = {

@@ -62,22 +62,15 @@ class SearchForm extends Component {
   };
 
   updateSearchResults = _.debounce(async term => {
-    if (term.length >= 2) {
-      try {
-        const results = await api.getSearchResults(term);
-        this.setState({
-          searchResults: results,
-          display: true,
-          loading: false
-        });
-      } catch (error) {
-        console.log(error);
-      }
-    } else {
+    try {
+      const results = await api.getSearchResults(term);
       this.setState({
-        searchResults: [],
+        searchResults: results,
+        display: true,
         loading: false
       });
+    } catch (error) {
+      console.log(error);
     }
   }, 500);
 

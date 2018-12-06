@@ -48,7 +48,6 @@ class SearchForm extends Component {
   };
 
   onChange = e => {
-    console.log('onChange');
     const newTerm = e.target.value;
     this.setState({
       prevTerm: newTerm,

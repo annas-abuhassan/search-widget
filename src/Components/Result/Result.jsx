@@ -4,7 +4,7 @@ import './Result.css';
 
 const Result = ({ result, updateSearchTerm }) => {
   const { bookingId, name, country, region } = result;
-  return country ? (
+  return bookingId ? (
     <div
       className="result"
       onClick={() => updateSearchTerm(`${name}, ${region}, ${country}`)}

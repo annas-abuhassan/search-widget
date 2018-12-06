@@ -2,7 +2,7 @@
 
 The point of this repository is to demonstrate my ability to create a "Search Widget" ala [Rental Cars](www.rentalcars.com)
 
-I chose React to make this.
+I chose React to make this app, and used Jest + Enzyme for creating tests & mocks.
 A live version of this app can be found [here](https://aah-rentalcars.netlify.com)
 
 ## Feature Breakdown
@@ -26,6 +26,7 @@ Additional features I felt was nifty:
 - [x] Clicking a search result completes the input box with a complete search query
 - [x] Clicking back onto the input box returns back the original search term
 - [x] Used debouncing to limit API calls when a user is entering / deleting a search term
+- [x] Implemented unit tests
 
 ## Getting Started
 
@@ -34,6 +35,7 @@ Additional features I felt was nifty:
 This repo requires the following packages:
 
 - [react](https://www.npmjs.com/package/react)
+- [enzyme](https://www.npmjs.com/package/enzyme)
 - [axios](https://www.npmjs.com/package/axios)
 - [underscore](https://www.npmjs.com/package/underscore)
 

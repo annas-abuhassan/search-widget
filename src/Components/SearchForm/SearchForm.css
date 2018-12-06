@@ -14,8 +14,10 @@ label {
 }
 
 input {
+  margin-top: 2%;
+  padding: 2%;
   width: 100%;
-  padding: 1%;
+  box-sizing: border-box;
 }
 
 .loading {

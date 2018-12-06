@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: 2fr 8fr;
   width: 100%;
-  padding: 1%;
 }
 
 .result:hover {

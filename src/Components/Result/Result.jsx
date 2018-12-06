@@ -18,7 +18,7 @@ const Result = ({ result, updateSearchTerm }) => {
       <div className="result-body">
         <div className="result-name">{name} </div>
         <div className="result-details">
-          {region}, {country}
+          {`${region ? region + ', ' : ''}${country}`}
         </div>
       </div>
     </div>

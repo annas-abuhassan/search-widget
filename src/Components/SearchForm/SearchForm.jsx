@@ -17,9 +17,9 @@ class SearchForm extends Component {
     const { display, searchResults, term, loading } = this.state;
 
     return (
-      <div className="search-form-container">
+      <form className="search-form-container">
         <h1>Where are you going?</h1>
-        <h2>Pick-up Location</h2>
+        <label>Pick-up Location</label>
         <input
           aria-label="Search widget input field"
           onChange={this.onChange}
@@ -36,7 +36,7 @@ class SearchForm extends Component {
         ) : (
           <> </>
         )}
-      </div>
+      </form>
     );
   }
 

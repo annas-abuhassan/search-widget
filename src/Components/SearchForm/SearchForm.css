@@ -15,6 +15,7 @@ label {
 
 input {
   width: 100%;
+  padding: 1%;
 }
 
 .loading {

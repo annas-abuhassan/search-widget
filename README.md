@@ -3,7 +3,6 @@
 The point of this repository is to demonstrate my ability to create a "Search Widget" ala [Rental Cars](www.rentalcars.com)
 
 I chose React to make this app, and used Jest + Enzyme for creating tests.  
-A live version of this app can be found [here](https://aah-rentalcars.netlify.com)
 
 ## Feature Breakdown
 
